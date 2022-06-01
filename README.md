@@ -1,0 +1,81 @@
+# Hackintosh on DELL OptiPlex 5060 MFF via [OpenCore][oc]
+
+![About this mac][system info]
+
+_macOS Supported:_ **12.3+**
+
+This is light configuration to run macOS smoothly. With Chime sound at boot.
+
+## Hardware configuration
+
+| **Component**    | **Model**                                       |
+| ---------------- | ----------------------------------------------- |
+| CPU              | Intel Core i5 8100T & UHD630                    |
+| Motherboard      | IPCF-BS/EK                                      |
+| RAM              | 2×16GB HyperX Impact 2666MHz (HX426S15IB2/16)   |
+| Audio Chipset    | ALC-3234                                        |
+| Ethernet         | Intel I219V7                                    |
+| WiFi & Bluetooth | Apple BCM94360CS2 802.11ac WLAN + Bluetooth 4.0 |
+| OS Disk (NVMe)   | MyDigitalSSD SBX 128GB                          |
+
+## Before you start make sure you have
+
+- Working hardware
+- [BIOS][bios] version `>= 1.18.0`
+- Actual [OpenCore][oc] `= 0.8.0`
+- Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `macserial`
+  tool from [OpenCore][oc] utilities.
+
+# Installation
+
+## BIOS Settings
+
+- _Secure Boot_ → Secure Boot Enable → Secure Boot Enable [**Uncheck**]
+
+## IMPORTANT HIDDEN BIOS SETTINGS
+
+In OC menu there is option to launch `modGRUBShell.efi` that allows to set hidden BIOS options. Such
+as `CFG-Lock` and `DVMT Pre-Allocated`
+
+```
+# Disable CFG-Lock
+setup_var 0x8DC 0x02
+
+# Pre-Allocated DVMT 64MB
+setup_var 0x5BE 0x00
+```
+
+## What's behind the scenes
+
+You must download all not bundled kexts and drivers from repositories by yourself. `HfsPlus.efi`
+driver and [resources][ocbinary] for Chime sound & OC GUI at boot.
+
+### Kexts
+
+- `USBMap.kext + USBMapLegacy.kext` - Plist-only kext for USB port mapping
+- [IntelMausi.kext][intelmausi] - Another intel driver for Ethernet
+- [AppleALC.kext][applealc] - Getting audio to work as easy-peasy
+- [Lilu.kext][lilu] - Dependency of `VirtualSMC.kext` and `WhateverGreen.kext`
+- [VirtualSMC.kext][virtualsmc] - A advanced replacement of FakeSMC, almost like native mac SMC.
+- [WhateverGreen.kext][wg] - Need for GPU support (even for disabling discrete GPU)
+
+### EFI drivers
+
+- ~VirtualSMC.efi~ - only needed if you use File Vault 2 or [authrestart][fv2].
+
+## Chnagelog
+
+###### 01/06/2022
+
+- The initial push to GitHub
+
+[applealc]: https://github.com/acidanthera/AppleALC
+[bios]: https://www.dell.com/support/home/en-us/product-support/product/optiplex-5060-desktop/drivers
+[fv2]: https://lifehacker.com/bypass-a-filevault-password-at-startup-by-rebooting-fro-1686770324
+[ocbinary]: https://github.com/acidanthera/OcBinaryData
+[intelmausi]: https://github.com/acidanthera/IntelMausi
+[lilu]: https://github.com/acidanthera/Lilu
+[oc]: https://github.com/acidanthera/OpenCorePkg
+[system info]: https://i.imgur.com/t4AyMdS.png
+[virtualsmc]: https://github.com/acidanthera/VirtualSMC
+[wg]: https://github.com/acidanthera/WhateverGreen
