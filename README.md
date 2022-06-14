@@ -30,6 +30,7 @@ This is light configuration to run macOS smoothly. With Chime sound at boot.
 
 ## BIOS Settings
 
+- _[Restore Settings]_ → • BIOS Defaults → [**OK**]
 - _Secure Boot_ → Secure Boot Enable → Secure Boot Enable [**Uncheck**]
 
 ## IMPORTANT HIDDEN BIOS SETTINGS
