@@ -474,9 +474,9 @@ DefinitionBlock ("", "SSDT", 2, "KRZH", "SsdtExt", 0x00000000)
                     }, 
 
                     "model", 
-                    Buffer (0x23)
+                    Buffer ()
                     {
-                        "Intel I219V7 PCIe Gigabit Ethernet"
+                        "Intel I219-V PCIe Gigabit Ethernet"
                     }, 
 
                     "name", 

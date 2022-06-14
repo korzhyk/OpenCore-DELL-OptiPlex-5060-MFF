@@ -14,7 +14,7 @@ This is light configuration to run macOS smoothly. With Chime sound at boot.
 | Motherboard      | IPCF-BS/EK                                      |
 | RAM              | 2×16GB HyperX Impact 2666MHz (HX426S15IB2/16)   |
 | Audio Chipset    | ALC-3234                                        |
-| Ethernet         | Intel I219V7                                    |
+| Ethernet         | Intel I219-V                                    |
 | WiFi & Bluetooth | Apple BCM94360CS2 802.11ac WLAN + Bluetooth 4.0 |
 | OS Disk (NVMe)   | MyDigitalSSD SBX 128GB                          |
 
