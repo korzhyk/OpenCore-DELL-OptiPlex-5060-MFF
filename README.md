@@ -32,6 +32,7 @@ This is light configuration to run macOS smoothly. With Chime sound at boot.
 
 - _[Restore Settings]_ → • BIOS Defaults → [**OK**]
 - _Secure Boot_ → Secure Boot Enable → Secure Boot Enable [**Uncheck**]
+- _Power Management_ → DeepSleep Control → Disable [**Check**]
 
 ## IMPORTANT HIDDEN BIOS SETTINGS
 
@@ -65,6 +66,10 @@ driver and [resources][ocbinary] for Chime sound & OC GUI at boot.
 - ~VirtualSMC.efi~ - only needed if you use File Vault 2 or [authrestart][fv2].
 
 ## Chnagelog
+
+###### 20/06/2022
+
+- OC v0.8.1 update
 
 ###### 01/06/2022
 
