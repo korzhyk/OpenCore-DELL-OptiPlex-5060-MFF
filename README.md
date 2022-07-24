@@ -30,7 +30,7 @@ This is light configuration to run macOS smoothly. With Chime sound at boot.
 
 ## BIOS Settings
 
-- _[Restore Settings]_ → • BIOS Defaults → [**OK**]
+- _[Restore Settings]_ → BIOS Defaults → [**OK**]
 - _Secure Boot_ → Secure Boot Enable → Secure Boot Enable [**Uncheck**]
 - _Power Management_ → DeepSleep Control → Disable [**Check**]
 
@@ -41,10 +41,10 @@ as `CFG-Lock` and `DVMT Pre-Allocated`
 
 ```
 # Disable CFG-Lock
-setup_var 0x8DC 0x02
+setup_var 0x5BE 0x00
 
 # Pre-Allocated DVMT 64MB
-setup_var 0x5BE 0x00
+setup_var 0x8DC 0x02
 ```
 
 ## What's behind the scenes
