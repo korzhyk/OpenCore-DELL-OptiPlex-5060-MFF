@@ -16,13 +16,13 @@ This is light configuration to run macOS smoothly. With Chime sound at boot.
 | Audio Chipset    | ALC-3234                                        |
 | Ethernet         | Intel I219-V                                    |
 | WiFi & Bluetooth | Apple BCM94360CS2 802.11ac WLAN + Bluetooth 4.0 |
-| OS Disk (NVMe)   | MyDigitalSSD SBX 128GB                          |
+| OS Disk (NVMe)   | INLAND Premium 256GB                            |
 
 ## Before you start make sure you have
 
 - Working hardware
 - [BIOS][bios] version `>= 1.18.0`
-- Actual [OpenCore][oc] `= 0.8.0`
+- Actual [OpenCore][oc] `= 0.9.3`
 - Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `macserial`
   tool from [OpenCore][oc] utilities.
 
@@ -54,7 +54,7 @@ driver and [resources][ocbinary] for Chime sound & OC GUI at boot.
 
 ### Kexts
 
-- `USBMap.kext + USBMapLegacy.kext` - Plist-only kext for USB port mapping
+- `Legacy_USB3` - Plist-only kext for USB port mapping
 - [IntelMausi.kext][intelmausi] - Another intel driver for Ethernet
 - [AppleALC.kext][applealc] - Getting audio to work as easy-peasy
 - [Lilu.kext][lilu] - Dependency of `VirtualSMC.kext` and `WhateverGreen.kext`
@@ -66,6 +66,9 @@ driver and [resources][ocbinary] for Chime sound & OC GUI at boot.
 - ~VirtualSMC.efi~ - only needed if you use File Vault 2 or [authrestart][fv2].
 
 ## Chnagelog
+###### 20/06/2023
+
+- OC v0.9.3 update
 
 ###### 20/06/2022
 
