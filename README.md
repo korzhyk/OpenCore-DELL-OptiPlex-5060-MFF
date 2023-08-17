@@ -36,7 +36,7 @@ This is light configuration to run macOS smoothly. With Chime sound at boot.
 
 ## IMPORTANT HIDDEN BIOS SETTINGS
 
-In OC menu there is option to launch `modGRUBShell.efi` that allows to set hidden BIOS options. Such
+In OC menu there is option to launch `setup_var.efi` that allows to set hidden BIOS options. Such
 as `CFG-Lock` and `DVMT Pre-Allocated`
 
 ```
