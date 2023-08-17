@@ -59,7 +59,7 @@ driver and [resources][ocbinary] for Chime sound & OC GUI at boot.
 - [AppleALC.kext][applealc] - Getting audio to work as easy-peasy
 - [Lilu.kext][lilu] - Dependency of `VirtualSMC.kext` and `WhateverGreen.kext`
 - [VirtualSMC.kext][virtualsmc] - A advanced replacement of FakeSMC, almost like native mac SMC.
-- [WhateverGreen.kext][wg] - Need for GPU support (even for disabling discrete GPU)
+- [WhateverGreen.kext][wg] - Need for GPU support
 
 ### EFI drivers
 
