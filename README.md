@@ -21,7 +21,7 @@ This is light configuration to run macOS smoothly. With Chime sound at boot.
 ## Before you start make sure you have
 
 - Working hardware
-- [BIOS][bios] version `>= 1.18.0`
+- [BIOS][bios] version `= 1.18.0`
 - Actual [OpenCore][oc] `= 0.9.3`
 - Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `macserial`
   tool from [OpenCore][oc] utilities.
