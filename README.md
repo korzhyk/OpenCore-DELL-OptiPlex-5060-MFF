@@ -41,11 +41,14 @@ as `CFG-Lock` and `DVMT Pre-Allocated`.
 ⚠️ Attention: You must know the correct address for options that you want to change. Address of the option can change within different versions of BIOS for the same hardware. Otherwise you can corrupt your BIOS.
 
 ```
-# Disable CFG-Lock
-setup_var 0x5BE 0x00
+# CFG Lock = Disable
+setup_var 0x5BE 0x0
 
-# Pre-Allocated DVMT 64MB
-setup_var 0x8DC 0x02
+# DVMT Pre-Allocated = 64MB
+setup_var 0x8DC 0x2
+
+# SPD Write Disable = Disable (fyi)
+setup_var 0x10C9 0x0
 ```
 
 ## What's behind the scenes
