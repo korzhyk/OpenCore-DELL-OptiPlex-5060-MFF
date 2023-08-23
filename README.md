@@ -1,6 +1,6 @@
 # Hackintosh on DELL OptiPlex 5060 MFF via [OpenCore][oc]
 
-![About this mac][system info]
+![About this mac](https://github.com/korzhyk/OpenCore-DELL-OptiPlex-5060-MFF/assets/1100134/f8e56319-5d79-42c9-98d8-528515baa086)
 
 _macOS Supported:_ **12.3+**
 
@@ -12,7 +12,7 @@ This is light configuration to run macOS smoothly. With Chime sound at boot. �
 | ---------------- | ----------------------------------------------- |
 | CPU              | Intel Core i5 8100T & UHD630                    |
 | Motherboard      | IPCF-BS/EK                                      |
-| RAM              | 2×16GB HyperX Impact 2666MHz (HX426S15IB2/16)   |
+| RAM              | 2×8GB HyperX Impact 2666MHz (HX426S15IB2/16)   |
 | Audio Chipset    | ALC-3234                                        |
 | Ethernet         | Intel I219-V                                    |
 | WiFi & Bluetooth | Apple BCM94360CS2 802.11ac WLAN + Bluetooth 4.0 |
@@ -36,20 +36,25 @@ This is light configuration to run macOS smoothly. With Chime sound at boot. �
 
 ## IMPORTANT HIDDEN BIOS SETTINGS
 
-In OC menu there is option to launch `setup_var.efi` that allows to set hidden BIOS options. Such
-as `CFG-Lock` and `DVMT Pre-Allocated`.
-⚠️ Attention: You must know the correct address for options that you want to change. Address of the option can change within different versions of BIOS for the same hardware. Otherwise you can corrupt your BIOS.
+In OC menu you can notice [two options](https://github.com/korzhyk/OpenCore-DELL-OptiPlex-5060-MFF/blob/8b82ee962bf2161b79b78a0bc90d3f25dd2f98d0/config.plist#L949-L992) to launch `setup_var.efi` that allows to set hidden BIOS
+options. Such as `CFG-Lock` and `DVMT Pre-Allocated`. [Here](https://gist.github.com/korzhyk/1cd4a856a080069c5178823f16606bd7/raw/File_DXE_driver_Setup_1.25.0.ffs.0.0.en-US.ifr.txt) is extracted section for BIOS `1.25.0`
+(identical with `1.18.0`).
 
-```
-# CFG Lock = Disable
-setup_var 0x5BE 0x0
+⚠️ Attention: Anyway you must know the correct address for options that you want to change. Address
+of the option can change within different versions of BIOS for the same hardware otherwise you can
+corrupt your BIOS. ⚠️
 
-# DVMT Pre-Allocated = 64MB
-setup_var 0x8DC 0x2
+<details>
+  <summary>RAW values</summary>
 
-# SPD Write Disable = Disable (fyi)
-setup_var 0x10C9 0x0
-```
+  ```
+  # CFG Lock = Disable
+  setup_var 0x5BE 0x0
+  
+  # DVMT Pre-Allocated = 64MB
+  setup_var 0x8DC 0x2
+  ```
+</details>
 
 ## What's behind the scenes
 
@@ -70,6 +75,10 @@ driver and [resources][ocbinary] for Chime sound & OC GUI at boot.
 - ~VirtualSMC.efi~ - only needed if you use File Vault 2 or [authrestart][fv2].
 
 ## Chnagelog
+###### 23/08/2023
+
+- OC v0.9.4
+
 ###### 20/06/2023
 
 - OC v0.9.3 update
@@ -89,6 +98,5 @@ driver and [resources][ocbinary] for Chime sound & OC GUI at boot.
 [intelmausi]: https://github.com/acidanthera/IntelMausi
 [lilu]: https://github.com/acidanthera/Lilu
 [oc]: https://github.com/acidanthera/OpenCorePkg
-[system info]: https://i.imgur.com/t4AyMdS.png
 [virtualsmc]: https://github.com/acidanthera/VirtualSMC
 [wg]: https://github.com/acidanthera/WhateverGreen
