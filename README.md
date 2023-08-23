@@ -4,7 +4,7 @@
 
 _macOS Supported:_ **12.3+**
 
-This is light configuration to run macOS smoothly. With Chime sound at boot.
+This is light configuration to run macOS smoothly. With Chime sound at boot. 🔉
 
 ## Hardware configuration
 
@@ -16,13 +16,13 @@ This is light configuration to run macOS smoothly. With Chime sound at boot.
 | Audio Chipset    | ALC-3234                                        |
 | Ethernet         | Intel I219-V                                    |
 | WiFi & Bluetooth | Apple BCM94360CS2 802.11ac WLAN + Bluetooth 4.0 |
-| OS Disk (NVMe)   | INLAND Premium 256GB                            |
+| OS Disk (NVMe)   | INLAND Premium 256GB PCIe3.0 x4                 |
 
 ## Before you start make sure you have
 
 - Working hardware
-- [BIOS][bios] version `= 1.18.0`
-- Actual [OpenCore][oc] `= 0.9.3`
+- [BIOS][bios] version `<=1.25.0`
+- Actual [OpenCore][oc] `=0.9.4`
 - Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `macserial`
   tool from [OpenCore][oc] utilities.
 
@@ -31,7 +31,7 @@ This is light configuration to run macOS smoothly. With Chime sound at boot.
 ## BIOS Settings
 
 - _[Restore Settings]_ → BIOS Defaults → [**OK**]
-- _Secure Boot_ → Secure Boot Enable → Secure Boot Enable [**Uncheck**]
+- _Secure Boot_ → Secure Boot Mode → Audit Mode [**Check**]
 - _Power Management_ → DeepSleep Control → Disable [**Check**]
 
 ## IMPORTANT HIDDEN BIOS SETTINGS
