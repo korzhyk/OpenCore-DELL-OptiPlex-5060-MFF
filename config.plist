@@ -843,6 +843,8 @@
 			<false/>
 			<key>HideAuxiliary</key>
 			<true/>
+			<key>InstanceIdentifier</key>
+			<string></string>
 			<key>LauncherOption</key>
 			<string>Disabled</string>
 			<key>LauncherPath</key>
@@ -946,11 +948,11 @@
 		<array>
 			<dict>
 				<key>Arguments</key>
-				<string>0x5BE 0x00</string>
+				<string>0x5BE 0x0 -n Setup --write_on_demand</string>
 				<key>Auxiliary</key>
 				<true/>
 				<key>Comment</key>
-				<string>Not signed for security reasons</string>
+				<string>Full control over CPU power management, BIOS version <=1.25.0</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Flavour</key>
@@ -958,21 +960,21 @@
 				<key>FullNvramAccess</key>
 				<false/>
 				<key>Name</key>
-				<string>Disable CFG-Lock</string>
+				<string>Disable CFG Lock</string>
 				<key>Path</key>
 				<string>setup_var.efi</string>
 				<key>RealPath</key>
 				<false/>
 				<key>TextMode</key>
-				<false/>
+				<true/>
 			</dict>
 			<dict>
 				<key>Arguments</key>
-				<string>0x8DC 0x02</string>
+				<string>0x8DC 0x2 -n Setup --write_on_demand</string>
 				<key>Auxiliary</key>
 				<true/>
 				<key>Comment</key>
-				<string>Not signed for security reasons</string>
+				<string>DVMT Pre-Allocated = 64MB, BIOS version <=1.25.0</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Flavour</key>
@@ -980,13 +982,13 @@
 				<key>FullNvramAccess</key>
 				<false/>
 				<key>Name</key>
-				<string>Pre-Allocated DVMT 64MB</string>
+				<string>Set DVMT 64MB</string>
 				<key>Path</key>
 				<string>setup_var.efi</string>
 				<key>RealPath</key>
 				<false/>
 				<key>TextMode</key>
-				<false/>
+				<true/>
 			</dict>
 			<dict>
 				<key>Arguments</key>
