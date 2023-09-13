@@ -75,6 +75,10 @@ driver and [resources][ocbinary] for Chime sound & OC GUI at boot.
 - ~VirtualSMC.efi~ - only needed if you use File Vault 2 or [authrestart][fv2].
 
 ## Chnagelog
+###### 13/09/2023
+
+- OC v0.9.5
+
 ###### 23/08/2023
 
 - OC v0.9.4
