@@ -952,7 +952,7 @@
 				<key>Auxiliary</key>
 				<true/>
 				<key>Comment</key>
-				<string>Full control over CPU power management, BIOS version <=1.25.0</string>
+				<string>Full control over CPU power management, BIOS version ≤1.25.0</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Flavour</key>
@@ -974,7 +974,7 @@
 				<key>Auxiliary</key>
 				<true/>
 				<key>Comment</key>
-				<string>DVMT Pre-Allocated = 64MB, BIOS version <=1.25.0</string>
+				<string>DVMT Pre-Allocated = 64MB, BIOS version ≤1.25.0</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Flavour</key>
