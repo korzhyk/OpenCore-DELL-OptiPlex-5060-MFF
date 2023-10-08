@@ -10,7 +10,7 @@ This is light configuration to run macOS smoothly. With Chime sound at boot. ðŸ”
 
 | **Component**    | **Model**                                       |
 | ---------------- | ----------------------------------------------- |
-| CPU              | Intel Core i5 8100T & UHD630                    |
+| CPU              | Intel Core i5 8500T & UHD630                    |
 | Motherboard      | IPCF-BS/EK                                      |
 | RAM              | 2Ã—8GB HyperX Impact 2666MHz (HX426S15IB2/16)   |
 | Audio Chipset    | ALC-3234                                        |
