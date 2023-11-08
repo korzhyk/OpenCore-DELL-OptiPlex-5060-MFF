@@ -70,7 +70,7 @@
 						<key>Comment</key>
 						<string>Front Type-C</string>
 						<key>UsbConnector</key>
-						<integer>10</integer>
+						<integer>9</integer>
 						<key>name</key>
 						<string>HS02</string>
 						<key>port</key>
@@ -161,7 +161,7 @@
 						<key>Comment</key>
 						<string>Front Type-C</string>
 						<key>UsbConnector</key>
-						<integer>10</integer>
+						<integer>9</integer>
 						<key>name</key>
 						<string>SS02</string>
 						<key>port</key>
